@@ -1,3 +1,3 @@
 package com.example.shared
 
-actual fun platform() = "iOS"
+//actual fun platform() = "iOS"
