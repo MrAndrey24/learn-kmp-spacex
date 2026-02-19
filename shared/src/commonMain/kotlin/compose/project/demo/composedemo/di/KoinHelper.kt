@@ -1,4 +1,4 @@
-package compose.project.demo.composedemo.di
+package compose.project.demo.composedemo.di.di
 
 import compose.project.demo.composedemo.di.modules.sharedModule
 import org.koin.core.KoinApplication
