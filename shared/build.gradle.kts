@@ -101,7 +101,12 @@ kotlin {
                 // Add Android-specific dependencies here. Note that this source set depends on
                 // commonMain by default and will correctly pull the Android artifacts of any KMP
                 // dependencies declared in commonMain.
+
+                // Ktor
                 implementation(libs.ktor.client.okhttp)
+
+                // SQLDelight
+                implementation(libs.sqldelight.driver.android)
             }
         }
 
@@ -121,9 +126,17 @@ kotlin {
                 // on common by default and will correctly pull the iOS artifacts of any
                 // KMP dependencies declared in commonMain.
 
+                // ktor
                 implementation(libs.ktor.client.darwin)
+
+                // SQLDelight
+                implementation(libs.sqldelight.driver.native)
             }
         }
     }
+}
 
+sqldelight {
+    databases { create("AppDatabase") { packageName.set("compose.project.demo.composedemo.data.local") } }
+    linkSqlite = true
 }
