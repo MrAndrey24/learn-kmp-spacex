@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidMultiplatformLibrary)
     alias(libs.plugins.androidLint)
+    alias(libs.plugins.sqlDelight)
 }
 
 kotlin {
@@ -137,6 +138,6 @@ kotlin {
 }
 
 sqldelight {
-    databases { create("AppDatabase") { packageName.set("compose.project.demo.composedemo.data.local") } }
+    databases { create("AppDatabase") { packageName.set("sqldelight.compose.project.demo.composedemo.data.local") } }
     linkSqlite = true
 }
